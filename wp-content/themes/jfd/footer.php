@@ -10,24 +10,53 @@
  */
 
 ?>
-<?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
-			</div><!-- .row -->
-		</div><!-- .container -->
-	</div><!-- #content -->
-    <?php get_template_part( 'footer-widget' ); ?>
-	<footer id="colophon" class="site-footer <?php echo wp_bootstrap_starter_bg_class(); ?>" role="contentinfo">
-		<div class="container-fluid p-3 p-md-5">
-            <div class="site-info">
-                &copy; <?php echo date('Y'); ?> <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?>
-                <span class="sep"> | </span>
-                <a class="credits" href="https://afterimagedesigns.com/wp-bootstrap-starter/" target="_blank" title="Wordpress Technical Support" alt="Bootstrap Wordpress Theme"><?php echo esc_html__('Bootstrap Wordpress Theme','wp-bootstrap-starter'); ?></a>
+    <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
+    </div>
+    <!-- .row -->
+    </div>
+    <!-- .container -->
+    </div>
+    <!-- #content -->
 
-            </div><!-- close .site-info -->
-		</div>
-	</footer><!-- #colophon -->
-<?php endif; ?>
-</div><!-- #page -->
+    <footer id="colophon" class="site-footer <?php echo wp_bootstrap_starter_bg_class(); ?>" role="contentinfo">
+        <section class="footer-section-1">
+            <div class="container">
 
-<?php wp_footer(); ?>
-</body>
-</html>
+                <div class="row">
+                    <h3>need any help for your website?</h3>
+                    <a href="#"><span class="fa fa-phone"></span>786-863-0270</a>
+                    <a href="#"><span class="fa fa-right-arrow"></span>contact us</a>
+                </div>
+            </div>
+        </section>
+        <section class="footer-section-2">
+            <?php get_template_part( 'footer-widget' ); ?>
+        </section>
+        <section class="footer-section-3">
+            <div class="container py-3 py-md-5">
+                <div class="site-info">
+                    &copy; Copyrights
+                    <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?>
+                    <?php echo date('Y'); ?>
+
+                    <span class="sep"> | </span> Designed By
+                    <a class="credits" href="https://jermaineforbes.com" target="_blank" title="Jermaine Forbes" alt="Jermaine Forbes Design Theme">
+                        Jermaine Forbes
+                    </a>
+
+                </div>
+                <!-- close .site-info -->
+            </div>
+
+        </section>
+
+    </footer>
+    <!-- #colophon -->
+    <?php endif; ?>
+    </div>
+    <!-- #page -->
+
+    <?php wp_footer(); ?>
+    </body>
+
+    </html>

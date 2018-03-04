@@ -14,12 +14,112 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area col-sm-12 col-md-12 col-lg-8">
-		<main id="main" class="site-main" role="main">
+    <section id="primary" class="content-area ">
+        <main id="main" class="site-main" role="main">
+            <section class="main-section-1">
+                <img class="img-fluid" src="http://via.placeholder.com/1920x900" alt="home main image" />
+            </section>
+            <section class="main-section-2">
+                <div class="container">
+                    <h2>Few Reasons Why We Are One Of The Most Effective SEO Expert In The World</h2>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="circle-icon ">
+                                <span class="fa fa-search"></span>
+                            </div>
+                            <h4>Big Data Analysis</h4>
+                            <p>
+                                Borem ipsum dolor sit am et fermentum vestibulum etiam luctus et, mi ornare aptent neque volutpat.
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="circle-icon ">
+                                <span class="fa fa-search"></span>
+                            </div>
+                            <h4>Big Data Analysis</h4>
+                            <p>
+                                Borem ipsum dolor sit am et fermentum vestibulum etiam luctus et, mi ornare aptent neque volutpat.
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="circle-icon ">
+                                <span class="fa fa-search"></span>
+                            </div>
+                            <h4>Big Data Analysis</h4>
+                            <p>
+                                Borem ipsum dolor sit am et fermentum vestibulum etiam luctus et, mi ornare aptent neque volutpat.
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="circle-icon ">
+                                <span class="fa fa-search"></span>
+                            </div>
+                            <h4>Big Data Analysis</h4>
+                            <p>
+                                Borem ipsum dolor sit am et fermentum vestibulum etiam luctus et, mi ornare aptent neque volutpat.
+                            </p>
+                        </div>
 
+                    </div>
+                </div>
+            </section>
+            <section class="main-section-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>Analize Your Website Ranking & Score</h2>
+                            <p>
+                                Mimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book simply dummy text of the printing and typesetting industry. pe and scrambled it to make a type specimen book.
+                            </p>
+                            <a href="#" class="btn btn-primary">
+                                read more
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <img class="img-fluid" src="http://via.placeholder.com/600x400" />
+                        </div>
+                    </div>
+                </div>
+                <img class="img-fluid" src="http://via.placeholder.com/1920x400" />
+            </section>
+            <section class="main-section-4">
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+                <div class="container">
+                    <h2>Recent Case Studies</h2>
+                    <p>Seo Rem Ipsum Dolor Sit Amet, Non Odio Tincidunt Ut Ante Suspendise</p>
 
-<?php
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img class="img-fluid" src="http://via.placeholder.com/400x200" alt="image" />
+                            <h3>content strategy</h3>
+                            <p>
+                                SEO torem ipsum dolor sit amet, consectetur adipisciaen elised eiusmod tempor incididunt.
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                            <img class="img-fluid" src="http://via.placeholder.com/400x200" alt="image" />
+                            <h3>content strategy</h3>
+                            <p>
+                                SEO torem ipsum dolor sit amet, consectetur adipisciaen elised eiusmod tempor incididunt.
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                            <img class="img-fluid" src="http://via.placeholder.com/400x200" alt="image" />
+                            <h3>content strategy</h3>
+                            <p>
+                                SEO torem ipsum dolor sit amet, consectetur adipisciaen elised eiusmod tempor incididunt.
+                            </p>
+                        </div>
+
+                    </div>
+                    <a href="#" class="btn btn-primary"> see all cases</a>
+                </div>
+            </section>
+
+        </main>
+        <!-- #main -->
+    </section>
+    <!-- #primary -->
+
+    <?php
 get_footer();
