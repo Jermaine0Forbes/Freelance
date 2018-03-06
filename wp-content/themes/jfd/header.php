@@ -33,7 +33,7 @@
                                 <a class="email" href="#"><span class="fa fa-envelope"></span> skivac3@gmail.com</a>
                                 <a class="phone" href="#"><span class="fa fa-phone"></span> 786-863-0270</a>
                             </div>
-                            <div class="col-md-4 ml-auto social">
+                            <div class="col-md-2 ml-auto social">
                                 <a href="#"><span class="fa fa-facebook"></span></a>
                                 <a href="#"><span class="fa fa-twitter"></span></a>
                                 <a href="#"><span class="fa fa-linkedin"></span></a>
@@ -45,7 +45,7 @@
                 <section class="header-section-2">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="navbar-brand col-md-3">
+                            <div class="navbar-brand mr-0 col-md-3">
                                 <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
                                 <a href="<?php echo esc_url( home_url( '/' )); ?>">
                             <img src="<?php echo esc_attr(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
@@ -58,7 +58,7 @@
 
                             </div>
 
-                            <nav class="navbar navbar-expand-xl col-md-5 p-0">
+                            <nav class="navbar navbar-expand-xl col-md-6 p-0">
 
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="" aria-expanded="true" aria-label="Toggle navigation">
                                 <span class="fa fa-bar"></span>
@@ -69,9 +69,9 @@
                                 'theme_location'    => 'primary',
                                 'container'       => 'div',
                                 'container_id'    => '',
-                                'container_class' => 'collapse show navbar-collapse justify-content-end',
+                                'container_class' => 'collapse show navbar-collapse ',
                                 'menu_id'         => false,
-                                'menu_class'      => 'navbar-nav',
+                                'menu_class'      => 'navbar-nav primary',
                                 'depth'           => 3,
                                 'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
                                 'walker'          => new wp_bootstrap_navwalker()

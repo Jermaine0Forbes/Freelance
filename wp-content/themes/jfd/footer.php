@@ -25,7 +25,7 @@
                 <div class="row">
                     <h3>need any help for your website?</h3>
                     <a href="#"><span class="fa fa-phone"></span>786-863-0270</a>
-                    <a href="#"><span class="fa fa-right-arrow"></span>contact us</a>
+                    <a href="#"><span class="fa fa-arrow-right"></span>contact us</a>
                 </div>
             </div>
         </section>

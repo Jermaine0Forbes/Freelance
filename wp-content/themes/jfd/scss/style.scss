@@ -12,6 +12,205 @@ Text Domain: wp-bootstrap-starter
 Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, right-sidebar, custom-background, e-commerce, theme-options, sticky-post, full-width-template
 */
 
+$color-map:(blue:#0D47A1, black:#111111, orange:#FF6D00, grey:#F7F7F7, blue2:#132229);
+
+$one:map-get($color-map, blue);
+$two:map-get($color-map, black);
+$three:map-get($color-map, orange);
+$four:map-get($color-map, grey);
+$five:map-get($color-map, blue2);
+
+$blue:$one;
+$black:$two;
+$orange:$three;
+$grey:$four;
+$d-blue:$five;
+
 .container {
     max-width: 1200px;
 }
+
+a {
+    color: $black;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
+header#masthead {
+
+    .contact {
+
+        svg,
+        .fa {
+            color: $orange;
+            margin-right: 0.5em;
+        }
+    }
+    .email {
+        margin-right: 2em;
+    }
+    .header-section {
+        &-1 {
+            background: $black;
+            padding: 0.5em 0;
+
+            a {
+                color: white;
+                transition: all 0.3s;
+                &:hover {
+                    color: $blue;
+                }
+            }
+
+            .social {
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+
+        &-2 {
+            padding: 1em 0;
+
+
+        }
+    }
+
+    .navbar-collapse {}
+
+    .primary {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+
+
+        a {
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: all 0.3s;
+            &:hover {
+                color: $orange;
+            }
+        }
+    }
+
+    .quote {
+        a {
+            text-transform: capitalize;
+            background: white;
+            border: 2px solid $blue;
+            color: $blue;
+            font-weight: bold;
+            padding: 0.5em;
+        }
+    }
+
+
+} //header#masthead
+.home {
+
+    .block-info {
+        text-align: center;
+
+    }
+
+    .main-section {
+        &-2 {
+            padding-top: 5em;
+            padding-bottom: 10em;
+            box-sizing: border-box;
+            h2 {
+                text-align: center;
+            }
+
+            p {
+                color: grey;
+            }
+        }
+
+        &-3 {
+            background: $grey;
+            padding-top: 5em;
+
+            .btn {
+                background: $blue;
+                font-weight: bold; //font-size:1.1em;
+                padding: 0.75em 2em;
+                text-transform: uppercase;
+                border: 1px solid $blue;
+
+                &:hover {
+                    background: transparent;
+                }
+            }
+        }
+
+        &-4 {
+            padding: 5em 0;
+            background: $d-blue;
+            text-align: center;
+            color: white;
+            font-size: 1.3em;
+            box-sizing: border-box;
+
+
+            .btn {
+                border: 1px solid $orange;
+                color: white;
+                background: transparent;
+                transition: all 0.3s;
+                font-size: 1.1em;
+                padding: 0.5em 1em;
+                margin-top: 3em;
+                text-transform: capitalize;
+                &:hover {
+                    background: $orange;
+                }
+
+            }
+
+            p {
+                color: grey;
+            }
+        }
+    }
+
+    .circle-icon {
+        margin: 1em auto;
+        max-height: 150px;
+        max-width: 150px;
+        width: 100%;
+        height: 100%;
+        background: $blue;
+        border-radius: 50%;
+        font-size: 2.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+
+
+
+
+} //home
+footer.site-footer {
+    .footer-section {
+        &-1 {
+            background: $blue;
+            color: white;
+            padding: 2em 0;
+
+            a {
+                color: white;
+            }
+        }
+
+        &-3 {
+            background: black;
+        }
+    }
+
+} //footer.site-footer

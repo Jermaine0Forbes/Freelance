@@ -21,9 +21,9 @@ get_header(); ?>
             </section>
             <section class="main-section-2">
                 <div class="container">
-                    <h2>Few Reasons Why We Are One Of The Most Effective SEO Expert In The World</h2>
+                    <h2>Few Reasons Why We Are One Of The Most Effective SEO<br> Expert In The World</h2>
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-3 block-info">
                             <div class="circle-icon ">
                                 <span class="fa fa-search"></span>
                             </div>
@@ -32,7 +32,7 @@ get_header(); ?>
                                 Borem ipsum dolor sit am et fermentum vestibulum etiam luctus et, mi ornare aptent neque volutpat.
                             </p>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 block-info">
                             <div class="circle-icon ">
                                 <span class="fa fa-search"></span>
                             </div>
@@ -41,7 +41,7 @@ get_header(); ?>
                                 Borem ipsum dolor sit am et fermentum vestibulum etiam luctus et, mi ornare aptent neque volutpat.
                             </p>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 block-info">
                             <div class="circle-icon ">
                                 <span class="fa fa-search"></span>
                             </div>
@@ -50,7 +50,7 @@ get_header(); ?>
                                 Borem ipsum dolor sit am et fermentum vestibulum etiam luctus et, mi ornare aptent neque volutpat.
                             </p>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 block-info">
                             <div class="circle-icon ">
                                 <span class="fa fa-search"></span>
                             </div>
@@ -67,7 +67,7 @@ get_header(); ?>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
-                            <h2>Analize Your Website Ranking & Score</h2>
+                            <h2>Analize Your Website<br> Ranking & Score</h2>
                             <p>
                                 Mimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book simply dummy text of the printing and typesetting industry. pe and scrambled it to make a type specimen book.
                             </p>
