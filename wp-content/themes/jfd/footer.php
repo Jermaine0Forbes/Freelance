@@ -22,18 +22,20 @@
         <section class="footer-section-1">
             <div class="container">
 
-                <div class="row">
+                <div class="row justify-content-between center-y flex-lg-row flex-column">
                     <h3>need any help for your website?</h3>
-                    <a href="#"><span class="fa fa-phone"></span>786-863-0270</a>
-                    <a href="#"><span class="fa fa-arrow-right"></span>contact us</a>
+                    <a class="phone py-4 py-lg-0" href="tel:<?php echo $GLOBALS['cgv']['phone'] ?>"><span class="fa fa-phone"></span><?php echo $GLOBALS['cgv']['phone'] ?></a>
+                    <a class="contact" href="#">contact us <span class="fa fa-angle-right"></span></a>
                 </div>
             </div>
         </section>
         <section class="footer-section-2">
-            <?php get_template_part( 'footer-widget' ); ?>
+            <div class="container">
+                <?php get_template_part( 'footer-widget' ); ?>
+            </div>
         </section>
         <section class="footer-section-3">
-            <div class="container py-3 py-md-5">
+            <div class="container py-4">
                 <div class="site-info">
                     &copy; Copyrights
                     <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?>

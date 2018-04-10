@@ -26,12 +26,14 @@
         <div id="page" class="site">
             <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
             <header id="masthead" class="site-header navbar-static-top" role="banner">
-                <section class="header-section-1">
+                <section class="header-section-1 d-none d-md-block">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-4 contact">
-                                <a class="email" href="#"><span class="fa fa-envelope"></span> skivac3@gmail.com</a>
-                                <a class="phone" href="#"><span class="fa fa-phone"></span> 786-863-0270</a>
+                            <div class="col-md-6 contact">
+                                <a class="email" href="mailto:<?php echo $GLOBALS['cgv']['phone'] ?>"><span class="fa fa-envelope"></span> <?php echo $GLOBALS['cgv']['email'] ?></a>
+                                <a class="phone" href="tel:<?php echo $GLOBALS['cgv']['phone'] ?>">
+                                    <span class="fa fa-phone"></span> <?php echo $GLOBALS['cgv']['phone'] ?>
+                                </a>
                             </div>
                             <div class="col-md-2 ml-auto social">
                                 <a href="#"><span class="fa fa-facebook"></span></a>
@@ -44,11 +46,11 @@
                 </section>
                 <section class="header-section-2">
                     <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="navbar-brand mr-0 col-md-3">
+                        <div class="row center-x-md">
+                            <div class="navbar-brand mr-0 col-3">
                                 <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
                                 <a href="<?php echo esc_url( home_url( '/' )); ?>">
-                            <img src="<?php echo esc_attr(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                            <img src="<?php echo esc_attr(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" class="img-fluid" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
                                 </a>
                                 <?php else : ?>
                                 <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>">
@@ -58,20 +60,17 @@
 
                             </div>
 
-                            <nav class="navbar navbar-expand-xl col-md-6 p-0">
+                            <nav class="navbar navbar-expand-xl col-md-6 d-none d-md-block p-0">
 
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="" aria-expanded="true" aria-label="Toggle navigation">
-                                <span class="fa fa-bar"></span>
-                            </button>
 
                                 <?php
                                 wp_nav_menu(array(
                                 'theme_location'    => 'primary',
                                 'container'       => 'div',
                                 'container_id'    => '',
-                                'container_class' => 'collapse show navbar-collapse ',
+                                'container_class' => '',
                                 'menu_id'         => false,
-                                'menu_class'      => 'navbar-nav primary',
+                                'menu_class'      => 'nav primary',
                                 'depth'           => 3,
                                 'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
                                 'walker'          => new wp_bootstrap_navwalker()
@@ -81,13 +80,37 @@
                             </nav>
 
 
-                            <div class="col-md-3 quote">
-                                <a class="btn btn-primary"> get free quote</a>
+                            <div class="col-3 quote flex-right-md">
+                                <a class="btn btn-primary d-none d-md-inline-block"> get free quote</a>
+
+                                <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse" data-target=".nav-collapse" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="fa fa-bars"></span>
+                                </button>
                             </div>
                         </div>
 
                     </div>
-                    <!-- .header-block-2 -->
+                </section>
+                <!-- .header-block-2 -->
+                <section class="header-block-3">
+                    <nav class="navbar navbar-expand-xl  p-0">
+
+
+                        <?php
+                                wp_nav_menu(array(
+                                'theme_location'    => 'primary',
+                                'container'       => 'div',
+                                'container_id'    => '',
+                                'container_class' => 'collapse nav-collapse fluid',
+                                'menu_id'         => false,
+                                'menu_class'      => 'navbar-nav secondary',
+                                'depth'           => 3,
+                                'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
+                                'walker'          => new wp_bootstrap_navwalker()
+                                ));
+                                ?>
+
+                    </nav>
 
                 </section>
 

@@ -1,0 +1,118 @@
+/*=============
+    HEADER
+==============*/
+
+header#masthead {
+
+    .contact {
+
+
+        svg,
+        .fa {
+            color: $orange;
+            margin-right: 0.5em;
+        }
+    }
+    .email {
+        margin-right: 2em;
+    }
+    .header-section {
+        &-1 {
+            background: $black;
+            padding: 0.5em 0;
+
+            a {
+                color: white;
+                transition: all 0.3s;
+                &:hover {
+                    color: $blue;
+                }
+            }
+
+            .contact {
+                a {
+                    &:hover {
+                        color: $orange;
+                    }
+                }
+            }
+
+            .social {
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+
+        &-2 {
+            padding: 2em 0;
+
+
+        }
+    }
+
+    .navbar-collapse {}
+
+    .primary {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+
+
+        a {
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: all 0.3s;
+            &:hover {
+                color: $orange;
+            }
+        }
+    }
+
+    .secondary {
+
+        a {
+
+            background: $grey;
+            font-weight: 500;
+            text-transform: uppercase;
+            border-bottom: 1px solid $grey2;
+            padding: 0.5em 0;
+            padding-left: 1em;
+            transition: all 0.3s;
+            &:hover {
+                color: $blue;
+            }
+        }
+
+    }
+
+    .quote {
+        text-align: right;
+        a {
+            text-transform: capitalize;
+            background: white;
+            border: 2px solid $blue;
+            color: $blue;
+            font-weight: bold;
+            padding: 0.5em;
+            transition: all 0.5s;
+            &:hover {
+                color: white;
+                background: $blue;
+            }
+        }
+    }
+
+
+} //header#masthead
+@media (max-width:890px) {
+
+    header#masthead {
+
+        .site-title,
+        .primary a {
+            font-size: 0.8em;
+        }
+
+    }
+}

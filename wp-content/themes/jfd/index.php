@@ -23,41 +23,51 @@ get_header(); ?>
                 <div class="container">
                     <h2>Few Reasons Why We Are One Of The Most Effective SEO<br> Expert In The World</h2>
                     <div class="row">
-                        <div class="col-md-3 block-info">
-                            <div class="circle-icon ">
-                                <span class="fa fa-search"></span>
-                            </div>
-                            <h4>Big Data Analysis</h4>
-                            <p>
-                                Borem ipsum dolor sit am et fermentum vestibulum etiam luctus et, mi ornare aptent neque volutpat.
-                            </p>
+                        <div class="col-md-6 col-lg-3 block-info">
+                            <a href="#">
+                                <div class="circle-icon ">
+                                    <span class="fa fa-search"></span>
+                                </div>
+                                <h4>Big Data Analysis</h4>
+                                <p>
+                                    Borem ipsum dolor sit am et fermentum vestibulum etiam luctus et, mi ornare aptent neque volutpat.
+                                </p>
+                            </a>
+
                         </div>
-                        <div class="col-md-3 block-info">
-                            <div class="circle-icon ">
-                                <span class="fa fa-search"></span>
-                            </div>
-                            <h4>Big Data Analysis</h4>
-                            <p>
-                                Borem ipsum dolor sit am et fermentum vestibulum etiam luctus et, mi ornare aptent neque volutpat.
-                            </p>
+                        <div class="col-md-6 col-lg-3 block-info">
+                            <a href="#">
+
+                                <div class="circle-icon ">
+                                    <span class="fa fa-desktop"></span>
+                                </div>
+                                <h4>Big Data Analysis</h4>
+                                <p>
+                                    Borem ipsum dolor sit am et fermentum vestibulum etiam luctus et, mi ornare aptent neque volutpat.
+                                </p>
+                            </a>
                         </div>
-                        <div class="col-md-3 block-info">
-                            <div class="circle-icon ">
-                                <span class="fa fa-search"></span>
-                            </div>
-                            <h4>Big Data Analysis</h4>
-                            <p>
-                                Borem ipsum dolor sit am et fermentum vestibulum etiam luctus et, mi ornare aptent neque volutpat.
-                            </p>
+                        <div class="col-md-6 col-lg-3 block-info">
+                            <a href="#">
+                                <div class="circle-icon ">
+                                    <span class="fa fa-signal"></span>
+                                </div>
+                                <h4>Big Data Analysis</h4>
+                                <p>
+                                    Borem ipsum dolor sit am et fermentum vestibulum etiam luctus et, mi ornare aptent neque volutpat.
+                                </p>
+                            </a>
                         </div>
-                        <div class="col-md-3 block-info">
-                            <div class="circle-icon ">
-                                <span class="fa fa-search"></span>
-                            </div>
-                            <h4>Big Data Analysis</h4>
-                            <p>
-                                Borem ipsum dolor sit am et fermentum vestibulum etiam luctus et, mi ornare aptent neque volutpat.
-                            </p>
+                        <div class="col-md-6 col-lg-3 block-info">
+                            <a href="#">
+                                <div class="circle-icon ">
+                                    <span class="fa fa-lock"></span>
+                                </div>
+                                <h4>Big Data Analysis</h4>
+                                <p>
+                                    Borem ipsum dolor sit am et fermentum vestibulum etiam luctus et, mi ornare aptent neque volutpat.
+                                </p>
+                            </a>
                         </div>
 
                     </div>
@@ -75,17 +85,17 @@ get_header(); ?>
                                 read more
                             </a>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 ">
                             <img class="img-fluid" src="http://via.placeholder.com/600x400" />
                         </div>
                     </div>
                 </div>
-                <img class="img-fluid" src="http://via.placeholder.com/1920x400" />
+                <img class="img-fluid d-none d-md-flex" src="http://via.placeholder.com/1920x400" />
             </section>
             <section class="main-section-4">
 
                 <div class="container">
-                    <h2>Recent Case Studies</h2>
+                    <h2>Recent Projects</h2>
                     <p>Seo Rem Ipsum Dolor Sit Amet, Non Odio Tincidunt Ut Ante Suspendise</p>
 
                     <div class="row">

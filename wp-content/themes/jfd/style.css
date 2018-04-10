@@ -11,14 +11,78 @@ License URI: LICENSE
 Text Domain: wp-bootstrap-starter
 Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, right-sidebar, custom-background, e-commerce, theme-options, sticky-post, full-width-template
 */
+/*=============
+   CLASSES
+==============*/
 .container {
   max-width: 1200px; }
+  .container.slim {
+    max-width: 1000px; }
+  .container.slimmer {
+    max-width: 800px; }
 
+.center-x {
+  justify-content: center; }
+
+.center-y {
+  align-items: center; }
+
+.center-all {
+  justify-content: center;
+  align-items: center; }
+
+@media (max-width: 576px) {
+  .center-x-sm {
+    justify-content: center; }
+  .flex-right-sm {
+    margin-left: auto; }
+  .flex-left-sm {
+    margin-right: auto; } }
+
+@media (max-width: 768px) {
+  .center-x-md {
+    justify-content: center; }
+  .flex-right-md {
+    margin-left: auto; }
+  .flex-left-md {
+    margin-right: auto; } }
+
+@media (max-width: 992px) {
+  .center-x-lg {
+    justify-content: center; }
+  .flex-right-lg {
+    margin-left: auto; }
+  .flex-left-lg {
+    margin-right: auto; } }
+
+@media (max-width: 1200px) {
+  .center-x-xl {
+    justify-content: center; }
+  .flex-right-xl {
+    margin-left: auto; }
+  .flex-left-xl {
+    margin-right: auto; } }
+
+.flex-right {
+  margin-left: auto; }
+
+.flex-left {
+  margin-right: auto; }
+
+.fluid {
+  width: 100%; }
+
+/*=============
+    GENERAL
+==============*/
 a {
   color: #111111; }
   a:hover {
     text-decoration: none; }
 
+/*=============
+    HEADER
+==============*/
 header#masthead .contact svg,
 header#masthead .contact .fa {
   color: #FF6D00;
@@ -35,12 +99,14 @@ header#masthead .header-section-1 {
     transition: all 0.3s; }
     header#masthead .header-section-1 a:hover {
       color: #0D47A1; }
+  header#masthead .header-section-1 .contact a:hover {
+    color: #FF6D00; }
   header#masthead .header-section-1 .social {
     display: flex;
     justify-content: space-around; }
 
 header#masthead .header-section-2 {
-  padding: 1em 0; }
+  padding: 2em 0; }
 
 header#masthead .primary {
   display: flex;
@@ -53,14 +119,39 @@ header#masthead .primary {
     header#masthead .primary a:hover {
       color: #FF6D00; }
 
-header#masthead .quote a {
-  text-transform: capitalize;
-  background: white;
-  border: 2px solid #0D47A1;
-  color: #0D47A1;
-  font-weight: bold;
-  padding: 0.5em; }
+header#masthead .secondary a {
+  background: #F7F7F7;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-bottom: 1px solid grey;
+  padding: 0.5em 0;
+  padding-left: 1em;
+  transition: all 0.3s; }
+  header#masthead .secondary a:hover {
+    color: #0D47A1; }
 
+header#masthead .quote {
+  text-align: right; }
+  header#masthead .quote a {
+    text-transform: capitalize;
+    background: white;
+    border: 2px solid #0D47A1;
+    color: #0D47A1;
+    font-weight: bold;
+    padding: 0.5em;
+    transition: all 0.5s; }
+    header#masthead .quote a:hover {
+      color: white;
+      background: #0D47A1; }
+
+@media (max-width: 890px) {
+  header#masthead .site-title,
+  header#masthead .primary a {
+    font-size: 0.8em; } }
+
+/*=============
+    HOME
+==============*/
 .home .block-info {
   text-align: center; }
 
@@ -68,8 +159,19 @@ header#masthead .quote a {
   padding-top: 5em;
   padding-bottom: 10em;
   box-sizing: border-box; }
+  .home .main-section-2 .block-info {
+    transition: all 0.5s; }
+    .home .main-section-2 .block-info:hover {
+      box-shadow: 0px 3px 7px grey; }
+    .home .main-section-2 .block-info:nth-of-type(2) .circle-icon {
+      background: #1EC4DA; }
+    .home .main-section-2 .block-info:nth-of-type(3) .circle-icon {
+      background: #3FAF6C; }
+    .home .main-section-2 .block-info:nth-of-type(4) .circle-icon {
+      background: #EF5350; }
   .home .main-section-2 h2 {
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 3em; }
   .home .main-section-2 p {
     color: grey; }
 
@@ -81,9 +183,10 @@ header#masthead .quote a {
     font-weight: bold;
     padding: 0.75em 2em;
     text-transform: uppercase;
-    border: 1px solid #0D47A1; }
+    border: 2px solid #0D47A1; }
     .home .main-section-3 .btn:hover {
-      background: transparent; }
+      background: transparent;
+      color: #0D47A1; }
 
 .home .main-section-4 {
   padding: 5em 0;
@@ -108,10 +211,9 @@ header#masthead .quote a {
 
 .home .circle-icon {
   margin: 1em auto;
-  max-height: 150px;
   max-width: 150px;
   width: 100%;
-  height: 100%;
+  height: 150px;
   background: #0D47A1;
   border-radius: 50%;
   font-size: 2.5em;
@@ -120,12 +222,74 @@ header#masthead .quote a {
   align-items: center;
   color: white; }
 
+.home h3 {
+  color: white; }
+
+@media (max-width: 768px) {
+  .home .main-section-3 {
+    text-align: center; } }
+
+/*=============
+    FOOTER
+==============*/
 footer.site-footer .footer-section-1 {
   background: #0D47A1;
   color: white;
-  padding: 2em 0; }
+  padding: 3em 1em;
+  text-transform: capitalize; }
   footer.site-footer .footer-section-1 a {
-    color: white; }
+    color: white;
+    text-transform: uppercase; }
+  footer.site-footer .footer-section-1 .contact {
+    font-size: 1.2em;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: all 0.3s;
+    padding: 0.5em 1em; }
+    footer.site-footer .footer-section-1 .contact:hover {
+      background: #FF6D00;
+      border-color: #FF6D00; }
+  footer.site-footer .footer-section-1 .phone {
+    font-size: 1.5em; }
+    footer.site-footer .footer-section-1 .phone svg {
+      margin-right: 10px; }
+
+footer.site-footer .footer-section-2 {
+  background: #111111;
+  color: grey; }
 
 footer.site-footer .footer-section-3 {
   background: black; }
+
+footer.site-footer .widget {
+  font-size: 1.1em;
+  padding: 3em 0.5em; }
+  footer.site-footer .widget-1 .contact {
+    list-style: none;
+    padding: 0; }
+    footer.site-footer .widget-1 .contact svg {
+      color: #FF6D00; }
+  footer.site-footer .widget a {
+    color: grey;
+    transition: all 0.3s; }
+    footer.site-footer .widget a:hover {
+      color: #FF6D00; }
+  footer.site-footer .widget h3 {
+    color: white;
+    text-transform: capitalize;
+    padding-bottom: 1em;
+    margin-bottom: 0; }
+  footer.site-footer .widget li {
+    padding-bottom: 0.5em; }
+  footer.site-footer .widget .links {
+    padding: 0;
+    list-style: none; }
+    footer.site-footer .widget .links a {
+      text-transform: capitalize; }
+  footer.site-footer .widget .site-title {
+    color: #FF6D00;
+    text-transform: capitalize; }
+
+@media (max-width: 768px) {
+  footer.site-footer .widget {
+    text-align: center; } }

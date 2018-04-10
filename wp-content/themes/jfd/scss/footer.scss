@@ -1,0 +1,117 @@
+/*=============
+    FOOTER
+==============*/
+
+footer.site-footer {
+    .footer-section {
+        &-1 {
+            background: $blue;
+            color: white;
+            padding: 3em 1em;
+            text-transform: capitalize;
+
+            a {
+                color: white;
+                text-transform: uppercase;
+            }
+
+            .contact {
+                font-size: 1.2em;
+                border: 2px solid white;
+                border-radius: 5px;
+                transition: all 0.3s;
+                padding: 0.5em 1em;
+                &:hover {
+                    background: $three;
+                    border-color: $three;
+                }
+            }
+
+            .phone {
+                font-size: 1.5em;
+
+                svg {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        &-2 {
+            background: $black;
+            color: $grey2;
+        }
+
+        &-3 {
+            background: black;
+        }
+    }
+
+
+
+    .widget {
+
+        font-size: 1.1em;
+        padding: 3em 0.5em;
+
+        &-1 {
+
+            .contact {
+                list-style: none;
+                padding: 0;
+
+                svg {
+                    color: $three;
+                }
+            }
+        }
+
+        a {
+            color: $grey2;
+            transition: all 0.3s;
+            &:hover {
+                color: $three;
+            }
+        }
+
+        h3 {
+            color: white;
+            text-transform: capitalize;
+            padding-bottom: 1em;
+            margin-bottom: 0;
+        }
+
+        li {
+            padding-bottom: 0.5em;
+        }
+
+        .links {
+            padding: 0;
+            list-style: none;
+
+            a {
+                text-transform: capitalize;
+            }
+        }
+
+        .site-title {
+            color: $three;
+            text-transform: capitalize;
+        }
+
+    }
+
+} //footer.site-footer
+
+
+@media(max-width:768px){
+    
+    footer.site-footer{
+
+        .widget{
+
+            text-align:center;
+        }
+
+    }
+
+}
