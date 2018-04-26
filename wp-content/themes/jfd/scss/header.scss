@@ -4,6 +4,10 @@
 
 header#masthead {
 
+    z-index: 5;
+    background: white;
+    transition: all 0.3s;
+
     .contact {
 
 
@@ -20,6 +24,8 @@ header#masthead {
         &-1 {
             background: $black;
             padding: 0.5em 0;
+
+
 
             a {
                 color: white;
@@ -44,7 +50,7 @@ header#masthead {
         }
 
         &-2 {
-            padding: 2em 0;
+            padding: 1em 0;
 
 
         }
@@ -60,12 +66,16 @@ header#masthead {
 
         a {
             text-transform: uppercase;
-            font-weight: bold;
+            font-weight: 500;
             transition: all 0.3s;
             &:hover {
                 color: $orange;
             }
         }
+    }
+
+    .site-logo {
+        width: 30%;
     }
 
     .secondary {

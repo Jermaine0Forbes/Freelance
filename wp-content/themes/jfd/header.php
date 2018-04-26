@@ -50,7 +50,7 @@
                             <div class="navbar-brand mr-0 col-3">
                                 <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
                                 <a href="<?php echo esc_url( home_url( '/' )); ?>">
-                            <img src="<?php echo esc_attr(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" class="img-fluid" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                            <img src="<?php echo esc_attr(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" class="img-fluid site-logo" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
                                 </a>
                                 <?php else : ?>
                                 <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>">
@@ -60,7 +60,7 @@
 
                             </div>
 
-                            <nav class="navbar navbar-expand-xl col-md-6 d-none d-md-block p-0">
+                            <nav class="navbar navbar-expand-xl col-md-6 d-none d-md-block p-0 my-auto">
 
 
                                 <?php
@@ -80,7 +80,7 @@
                             </nav>
 
 
-                            <div class="col-3 quote flex-right-md">
+                            <div class="col-3 quote flex-right-md my-auto">
                                 <a class="btn btn-primary d-none d-md-inline-block"> get free quote</a>
 
                                 <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse" data-target=".nav-collapse" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
@@ -92,7 +92,7 @@
                     </div>
                 </section>
                 <!-- .header-block-2 -->
-                <section class="header-block-3">
+                <section class="header-section-3">
                     <nav class="navbar navbar-expand-xl  p-0">
 
 

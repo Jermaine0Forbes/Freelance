@@ -4,12 +4,27 @@
 
 .home {
 
+
     .block-info {
         text-align: center;
 
     }
 
     .main-section {
+
+        &-1 {
+
+            min-height: 600px;
+
+            .title {
+                color: white;
+                text-transform: capitalize;
+                font-size: 4em;
+                padding-top: 2em;
+                text-align: center;
+            }
+        }
+
         &-2 {
             padding-top: 5em;
             padding-bottom: 10em;
@@ -73,7 +88,9 @@
 
         &-4 {
             padding: 5em 0;
-            background: $d-blue;
+            background-image: url('http://jfd.co/wp-content/uploads/2018/04/section-3-bg.png');
+            background-size: cover;
+            background-position: center;
             text-align: center;
             color: white;
             font-size: 1.3em;

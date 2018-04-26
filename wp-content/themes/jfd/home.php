@@ -16,8 +16,8 @@ get_header(); ?>
 
     <section id="primary" class="content-area ">
         <main id="main" class="site-main" role="main">
-            <section class="main-section-1">
-                <img class="img-fluid" src="<?php the_field('s1_img'); ?>" alt="home main image" />
+            <section class="main-section-1" style="background-image:url(<?php the_field('s1_img'); ?>)">
+                <h1 class="title">we create powerful sites</h1>
             </section>
             <section class="main-section-2">
                 <div class="container">
