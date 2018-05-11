@@ -58,6 +58,24 @@ WP Bootstrap Starter includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 3.0.13 - April 17, 2018 =
+* Update the bootstrap files
+* Fix the layout of the category widget to show the post count properly
+
+= 3.0.12 - April 11, 2018 =
+* Move the js file to the footer
+* Create minified js file
+* Fix the font color in the footer bar
+
+= 3.0.11 - March 14, 2018 =
+* Minor changes in the style.css to fix the visibility of the sub menu in other theme options
+
+= 3.0.10 - March 13, 2018 =
+* Change the navbar-toggler data-target attribute to #main-nav
+* Add Installation welcome message
+* Fix the font color of the submenu in mobile on hover
+* Fix the path of the customizer.js which cause an error in the theme customizer
+
 = 3.0.9 - February 27, 2018 =
 * Fix the color of mobile menu
 * Change the background of the sub menu in smaller screen from white to transparent

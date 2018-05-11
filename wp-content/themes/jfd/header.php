@@ -20,6 +20,7 @@
         <link rel="profile" href="http://gmpg.org/xfn/11">
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
         <?php wp_head(); ?>
+        <link href="https://fonts.googleapis.com/css?family=Heebo:900|Teko:500" rel="stylesheet">
     </head>
 
     <body <?php body_class(); ?>>
@@ -81,7 +82,7 @@
 
 
                             <div class="col-3 quote flex-right-md my-auto">
-                                <a class="btn btn-primary d-none d-md-inline-block"> get free quote</a>
+                                <a class="btn btn-primary d-none d-md-inline-block" href="tel:<?php echo $GLOBALS['cgv']['phone'] ?>"> get free quote</a>
 
                                 <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse" data-target=".nav-collapse" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="fa fa-bars"></span>
@@ -118,6 +119,5 @@
             <!-- #masthead -->
 
             <div id="content" class="site-content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <?php endif; ?>
+
+                <?php endif; ?>

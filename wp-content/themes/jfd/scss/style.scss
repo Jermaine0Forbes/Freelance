@@ -33,6 +33,45 @@ $green:#3FAF6C;
 $lite-blue: #1EC4DA;
 $red:#EF5350;
 
+/*=============
+   ANIMATIONS
+==============*/
+
+@keyframes bottom-arrow {
+
+    from {
+        transform: translateY(0);
+
+    }
+    50% {
+        transform: translateY(-50px)
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bottom-fade-out {
+
+    from {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    to {
+        transform: translateY(200px);
+    }
+}
+
+.appear {
+    animation: bottom-arrow 0.7s ease forwards;
+}
+
+.fade-out {
+    animation: bottom-fade-out 1s forwards;
+}
 
 /*=============
    CLASSES
@@ -63,6 +102,23 @@ $red:#EF5350;
     }
 }
 
+
+
+
+.fixed-bottom-block {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100px;
+    padding: 1em;
+    transition: all 0.5s;
+
+
+}
+
+
 @for $i from 1 through length($sizes) {
     $size: nth($sizes, $i);
     $num: nth($number-sizes, $i);
@@ -83,6 +139,8 @@ $red:#EF5350;
     }
 }
 
+
+
 .flex-right {
     margin-left: auto;
 }
@@ -96,6 +154,29 @@ $red:#EF5350;
 }
 
 
+.scroll-arrow {
+
+    background: $orange;
+    border-radius: 50%;
+    padding: 1em 1.25em;
+    transition: all 0.3s;
+    border: 2px solid $orange;
+
+
+    .fa,
+    svg {
+        color: white;
+    }
+
+    &:hover {
+        background: $blue;
+        cursor: pointer;
+        border-color: white;
+    }
+}
+
+
+
 /*=============
     GENERAL
 ==============*/
@@ -107,8 +188,15 @@ a {
     }
 }
 
+h1,
+h2,
+h3 {
+    font-family: 'Heebo', sans-serif;
+}
+
 
 
 @import "header";
 @import "home";
+@import "faq";
 @import "footer";

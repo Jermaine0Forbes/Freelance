@@ -14,16 +14,19 @@
 
 get_header(); ?>
 
-    <section id="primary" class="content-area ">
+    <section id="primary" class="content-area fluid ">
         <main id="main" class="site-main" role="main">
             <section class="main-section-1" style="background-image:url(<?php the_field('s1_img'); ?>)">
                 <h1 class="title">we create powerful sites</h1>
+                <h3 class="title-2">Simply put we create websites and all that goes along with it!</h3>
+                <?php echo do_shortcode( '[contact-form-7 id="41" title="Home Contact Form"]' ); ?>
             </section>
-            <section class="main-section-2">
+            <section class="main-section-2 services" id="services">
                 <div class="container">
-                    <h2>
+                    <h2 class="header">
                         <?php the_field('s2_h2'); ?>
                     </h2>
+                    <h3 class="header-2">We create websites, so you don't have to</h3>
                     <div class="row">
                         <div class="col-md-6 col-lg-3 block-info">
                             <a href="<?php the_field('s2_block_a_1'); ?>">
@@ -83,7 +86,7 @@ get_header(); ?>
                     </div>
                 </div>
             </section>
-            <section class="main-section-3">
+            <section class="main-section-3 upgrade-site">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
@@ -99,53 +102,54 @@ get_header(); ?>
                             </a>
                         </div>
                         <div class="col-md-6 ">
-                            <img class="img-fluid" src="<?php //the_field('s3_a'); ?>http://via.placeholder.com/600x400" />
+                            <img class="img-fluid" src="<?php the_field('s3_img'); ?>" />
                         </div>
                     </div>
                 </div>
-                <img class="img-fluid d-none d-md-flex" src="http://via.placeholder.com/1920x400" />
+                <?php $src =  get_theme_file_uri()."/img/s3-btm.png"; ?>
+                <!--<img class="img-fluid d-none d-md-flex" src="<?php //echo $src;   ?>" /> -->
             </section>
-            <section class="main-section-4">
+            <section class="main-section-4 recent-projects">
 
                 <div class="container">
-                    <h2>
+                    <h2 class="header">
                         <?php the_field('s4_h2'); ?> </h2>
                     <p>
                         <?php the_field('s4_p'); ?> </p>
 
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-4 project project-1">
                             <a href="<?php the_field('s4_block_a_1'); ?> ">
                             
-                                <img class="img-fluid" src="<?php //the_field('s4_block_img_1'); ?> http://via.placeholder.com/400x200" alt="image" />
-                                <h3><?php the_field('s4_block_h3_1'); ?></h3>
-                                <p>
+                                <img class="img-fluid project-img" src="<?php the_field('s4_block_img_1'); ?> " alt="image" />
+                                <h3 class="title"><?php the_field('s4_block_h3_1'); ?></h3>
+                                <p class="summary">
                                    <?php the_field('s4_block_p_1'); ?>
                                 </p>
                             </a>
 
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 project project-2">
                             <a href="<?php the_field('s4_block_a_2'); ?>">
-                                <img class="img-fluid" src="<?php //the_field('s4_block_img_2'); ?> http://via.placeholder.com/400x200" alt="image" />
-                                <h3><?php the_field('s4_block_h3_2'); ?></h3>
-                                <p>
+                                <img class="img-fluid project-img" src="<?php the_field('s4_block_img_2'); ?> " alt="image" />
+                                <h3 class="title"><?php the_field('s4_block_h3_2'); ?></h3>
+                                <p class="summary">
                                     <?php the_field('s4_block_p_2'); ?>
                                 </p>
                             </a>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 project project-3">
                             <a href="<?php the_field('s4_block_a_3'); ?>">
-                                <img class="img-fluid" src="<?php //the_field('s4_block_img_3'); ?> http://via.placeholder.com/400x200" alt="image" />
-                                <h3><?php the_field('s4_block_h3_3'); ?></h3>
-                                <p>
+                                <img class="img-fluid project-img" src="<?php the_field('s4_block_img_3'); ?> " alt="image" />
+                                <h3 class="title"><?php the_field('s4_block_h3_3'); ?></h3>
+                                <p class="summary">
                                     <?php the_field('s4_block_p_3'); ?>
                                 </p>
                             </a>
                         </div>
 
                     </div>
-                    <a href="<?php the_field('s4_a'); ?>" class="btn btn-primary"> see all cases</a>
+                    <a href="http://jermaineforbes.com <?php //the_field('s4_a'); ?>" class="btn btn-primary"> see all cases</a>
                 </div>
             </section>
 

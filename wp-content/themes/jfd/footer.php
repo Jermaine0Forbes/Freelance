@@ -18,14 +18,22 @@
     </div>
     <!-- #content -->
 
+    <div class="fixed-bottom-block fade-out">
+        <div class="scroll-arrow">
+            <span class="fa fa-arrow-up">
+            
+            </span>
+        </div>
+    </div>
+
     <footer id="colophon" class="site-footer <?php echo wp_bootstrap_starter_bg_class(); ?>" role="contentinfo">
         <section class="footer-section-1">
             <div class="container">
 
-                <div class="row justify-content-between center-y flex-lg-row flex-column">
-                    <h3>need any help for your website?</h3>
-                    <a class="phone py-4 py-lg-0" href="tel:<?php echo $GLOBALS['cgv']['phone'] ?>"><span class="fa fa-phone"></span><?php echo $GLOBALS['cgv']['phone'] ?></a>
-                    <a class="contact" href="#">contact us <span class="fa fa-angle-right"></span></a>
+                <div class="row justify-content-around center-y flex-lg-row flex-column">
+                    <h3>if you need any help for your website?</h3>
+
+                    <a class="contact" href="tel:<?php echo $GLOBALS['cgv']['phone'] ?>">contact us <span class="fa fa-angle-right"></span></a>
                 </div>
             </div>
         </section>

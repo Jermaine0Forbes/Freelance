@@ -75,6 +75,30 @@ function wp_bootstrap_starter_setup() {
 endif;
 add_action( 'after_setup_theme', 'wp_bootstrap_starter_setup' );
 
+
+/**
+ * Add Welcome message to dashboard
+ */
+function wp_bootstrap_starter_reminder(){
+        $theme_page_url = 'https://afterimagedesigns.com/wp-bootstrap-starter/?dashboard=1';
+
+            if(!get_option( 'triggered_welcomet')){
+                $message = sprintf(__( 'Welcome to WP Bootstrap Starter Theme! Before diving in to your new theme, please visit the <a style="color: #fff; font-weight: bold;" href="%1$s" target="_blank">theme\'s</a> page for access to dozens of tips and in-depth tutorials.', 'wp-bootstrap-starter' ),
+                    esc_url( $theme_page_url )
+                );
+
+                printf(
+                    '<div class="notice is-dismissible" style="background-color: #6C2EB9; color: #fff; border-left: none;">
+                        <p>%1$s</p>
+                    </div>',
+                    $message
+                );
+                add_option( 'triggered_welcomet', '1', '', 'yes' );
+            }
+
+}
+add_action( 'admin_notices', 'wp_bootstrap_starter_reminder' );
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -188,12 +212,12 @@ function wp_bootstrap_starter_scripts() {
     wp_script_add_data( 'html5hiv', 'conditional', 'lt IE 9' );
 
 	// load bootstrap js
-    wp_enqueue_script('wp-bootstrap-starter-fontawesome', get_template_directory_uri() . '/inc/assets/js/fontawesome/fontawesome-all.min.js', array() );
-    wp_enqueue_script('wp-bootstrap-starter-fontawesome-v4', get_template_directory_uri() . '/inc/assets/js/fontawesome/fa-v4-shims.min.js', array() );
-    wp_enqueue_script('wp-bootstrap-starter-popper', get_template_directory_uri() . '/inc/assets/js/popper.min.js', array() );
-	wp_enqueue_script('wp-bootstrap-starter-bootstrapjs', get_template_directory_uri() . '/inc/assets/js/bootstrap.min.js', array() );
-    wp_enqueue_script('wp-bootstrap-starter-themejs', get_template_directory_uri() . '/inc/assets/js/theme-script.js', array() );
-	wp_enqueue_script( 'wp-bootstrap-starter-skip-link-focus-fix', get_template_directory_uri() . '/inc/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
+    wp_enqueue_script('wp-bootstrap-starter-fontawesome', get_template_directory_uri() . '/inc/assets/js/fontawesome/fontawesome-all.min.js', array(), '', true );
+    wp_enqueue_script('wp-bootstrap-starter-fontawesome-v4', get_template_directory_uri() . '/inc/assets/js/fontawesome/fa-v4-shims.min.js', array(), '', true );
+    wp_enqueue_script('wp-bootstrap-starter-popper', get_template_directory_uri() . '/inc/assets/js/popper.min.js', array(), '', true );
+	wp_enqueue_script('wp-bootstrap-starter-bootstrapjs', get_template_directory_uri() . '/inc/assets/js/bootstrap.min.js', array(), '', true );
+    wp_enqueue_script('wp-bootstrap-starter-themejs', get_template_directory_uri() . '/inc/assets/js/theme-script.min.js', array(), '', true );
+	wp_enqueue_script( 'wp-bootstrap-starter-skip-link-focus-fix', get_template_directory_uri() . '/inc/assets/js/skip-link-focus-fix.min.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

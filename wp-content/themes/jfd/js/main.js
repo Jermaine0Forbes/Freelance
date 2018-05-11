@@ -80,27 +80,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* 3 */
 /***/ (function(module, exports) {
 
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 jQuery(document).ready(function ($) {
     // Code that uses jQuery's $ can follow here.
-    var Talk;
-    (function (Talk) {
-        Talk[Talk["yes"] = 1] = "yes";
-        Talk[Talk["no"] = 0] = "no";
-        Talk[Talk["maybe"] = 2] = "maybe";
-    })(Talk || (Talk = {}));
-    function action(message) {
-        switch (message) {
-            case 0:
-                console.log("you said no");
-                break;
-            case 1:
-                console.log("you said yes");
-                break;
-            case 2:
-                console.log("you said maybe");
-                break;
-        }
-    }
     function StickMenu(obj) {
         obj = empty(obj) ? {} : obj;
         var menuBar = $(obj.menu) || $('.sticky-menu'), menuClass = obj.class || "on", _up = obj.whenUp || false, _down = obj.whenDown || false, _window = $(window);
@@ -191,6 +182,85 @@ jQuery(document).ready(function ($) {
         }
     });
     header.start();
+    var ScrollTo = /** @class */ (function () {
+        function ScrollTo(selector, target, offsetTop, animationTime) {
+            if (target === void 0) { target = "body"; }
+            if (offsetTop === void 0) { offsetTop = 200; }
+            if (animationTime === void 0) { animationTime = 300; }
+            this.selector = selector;
+            this.target = target;
+            this.offsetTop = offsetTop;
+            this.animationTime = animationTime;
+            this.scroll = this.scroll.bind(this);
+            this.to = this.to.bind(this);
+        }
+        ScrollTo.prototype.scroll = function () {
+            var selector = $(this.selector);
+            selector.on("click", this.to);
+        };
+        ScrollTo.prototype.to = function () {
+            var target = $(this.target).position();
+            $("html,body").animate({
+                scrollTop: (target.top - this.offsetTop)
+            }, this.animationTime);
+            console.log("It is working");
+            return false;
+        };
+        ScrollTo.prototype.start = function () {
+            this.scroll();
+        };
+        return ScrollTo;
+    }());
+    var service = new ScrollTo("#menu-item-42", "#services");
+    service.start();
+    var ScrollVisible = /** @class */ (function (_super) {
+        __extends(ScrollVisible, _super);
+        function ScrollVisible(selector, target, id, threshold) {
+            if (target === void 0) { target = "body"; }
+            if (threshold === void 0) { threshold = 50; }
+            var _this = _super.call(this, selector, target) || this;
+            _this.threshold = threshold;
+            _this.id = id;
+            _this.height = $("body").height();
+            _this.checkThreshold = _this.checkThreshold.bind(_this);
+            _this.onScroll = _this.onScroll.bind(_this);
+            _this.onClick = _this.onClick.bind(_this);
+            return _this;
+        }
+        ScrollVisible.prototype.checkThreshold = function () {
+            var threshold = (this.height / 100) * this.threshold, scrollPosition = $(window).scrollTop(), selector = $(this.selector);
+            //         console.log(`selector is  ${selector}`);
+            if (threshold <= scrollPosition) {
+                selector.addClass(this.id).removeClass("fade-out");
+            }
+            else {
+                selector.removeClass(this.id).addClass("fade-out");
+            }
+        };
+        ScrollVisible.prototype.onScroll = function () {
+            var $window = $(window);
+            $window.on("scroll", this.checkThreshold);
+        };
+        ScrollVisible.prototype.onClick = function () {
+            var selector = $(this.selector);
+            console.log(this.scroll);
+            selector.on("click", this.to);
+        };
+        ScrollVisible.prototype.start = function () {
+            this.onClick();
+            this.onScroll();
+        };
+        return ScrollVisible;
+    }(ScrollTo));
+    var bottomArrow = new ScrollVisible(".fixed-bottom-block", "body", "appear");
+    bottomArrow.start();
+    //$("#menu-item-42").on("click", function(){
+    //     const element = $("#services").position();
+    //    $("html,body").animate({
+    //        scrollTop:(element.top-200)
+    //    },300);
+    //    return false;
+    //});
 }); //end JQuery
 
 

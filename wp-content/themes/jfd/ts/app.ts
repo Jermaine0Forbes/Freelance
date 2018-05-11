@@ -2,25 +2,7 @@
 jQuery( document ).ready(function( $ ) {
 // Code that uses jQuery's $ can follow here.
    
-      enum Talk {
-    yes = 1,
-    no = 0,
-    maybe = 2,
-}
 
-function action( message:Talk):void{
-    switch(message){
-        case 0:
-        console.log("you said no");
-        break;
-        case 1:
-        console.log("you said yes");
-        break;
-        case 2:
-        console.log("you said maybe");
-        break;
-    }
-}
           
           
   function StickMenu(obj){
@@ -125,7 +107,7 @@ function action( message:Talk):void{
     }
           
 
-const header = StickMenu({
+const header =  StickMenu({
     menu:"header#masthead",
     whenUp : function(){
         $("header#masthead").css({
@@ -141,6 +123,121 @@ const header = StickMenu({
 });
     
 header.start();
+    
+    
+class ScrollTo{
+    
+    selector: string;
+    target: string;
+    offsetTop: number;
+    animationTime: number;
+    
+    constructor(selector, target:string ="body", offsetTop:number = 200, animationTime:number = 300){
+        this.selector = selector;
+        this.target = target;
+        this.offsetTop = offsetTop;
+        this.animationTime = animationTime;
+        
+        this.scroll= this.scroll.bind(this);
+        this.to = this.to.bind(this);
+    }
+    
+    scroll(){
+       const selector = $(this.selector);
+        
+        selector.on("click", this.to);
+    }
+    
+    to(){
+        const target = $(this.target).position();
+        $("html,body").animate({
+            scrollTop:(target.top - this.offsetTop)
+        },this.animationTime);
+        
+        console.log("It is working");
+        
+        return false; 
+    }
+    start(){
+        this.scroll();
+    }
+} 
+    
+    
+const service = new ScrollTo("#menu-item-42","#services");
+    
+service.start();
+    
+
+class ScrollVisible extends ScrollTo {
+    
+     id:string;
+     threshold:number;
+     height:number;
+    
+    constructor(selector, target:string ="body", id:string , threshold:number = 50 ){
+        super(selector,target);
+        
+        this.threshold = threshold;
+        this.id = id;
+        this.height = $("body").height();
+        
+        
+        this.checkThreshold = this.checkThreshold.bind(this);
+        this.onScroll = this.onScroll.bind(this);
+        this.onClick = this.onClick.bind(this);
+        
+    }
+    
+    checkThreshold(){
+        let threshold = (this.height/100)*this.threshold,
+            scrollPosition = $(window).scrollTop(),
+            selector = $(this.selector);
+//         console.log(`selector is  ${selector}`);
+        
+        if( threshold <= scrollPosition){
+            selector.addClass(this.id).removeClass("fade-out");
+           
+        }else{
+            selector.removeClass(this.id).addClass("fade-out");
+        }
+        
+        
+    }
+    
+    onScroll(){
+        const $window = $(window);
+        
+        $window.on("scroll", this.checkThreshold);
+        
+    }
+    
+    onClick(){
+        const selector = $(this.selector);
+        console.log(this.scroll);
+        selector.on("click", this.to);
+    }
+    
+    start(){
+        this.onClick();
+        this.onScroll();
+    }
+} 
+    
+
+const bottomArrow = new ScrollVisible(".fixed-bottom-block","body","appear");
+    
+bottomArrow.start();
+    
+    
+    
+//$("#menu-item-42").on("click", function(){
+//     const element = $("#services").position();
+//    $("html,body").animate({
+//        scrollTop:(element.top-200)
+//    },300);
+//    return false;
+//});
          
     
  
