@@ -12,15 +12,21 @@ Text Domain: wp-bootstrap-starter
 Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, right-sidebar, custom-background, e-commerce, theme-options, sticky-post, full-width-template
 */
 
+$map-2:(purple:#662D91, black: #111111, green:#72C032, grey:#eee, purpleD:#25033F);
 $color-map:(blue:#0D47A1, black:#111111, orange:#FF6D00, grey:#F7F7F7, blue2:#132229);
 $sizes:(sm, md, lg, xl);
 $number-sizes:(576px, 768px, 992px, 1200px);
 
-$one:map-get($color-map, blue);
-$two:map-get($color-map, black);
-$three:map-get($color-map, orange);
-$four:map-get($color-map, grey);
-$five:map-get($color-map, blue2);
+//$one:map-get($color-map, blue);
+//$two:map-get($color-map, black);
+//$three:map-get($color-map, orange);
+//$four:map-get($color-map, grey);
+//$five:map-get($color-map, blue2);
+$one:map-get($map-2, purple);
+$two:map-get($map-2, black);
+$three:map-get($map-2, green);
+$four:map-get($map-2, grey);
+$five:map-get($map-2, purpleD);
 
 
 $blue:$one;
@@ -28,8 +34,10 @@ $black:$two;
 $orange:$three;
 $grey:$four;
 $grey2:grey;
+$grey3:#eee;
 $d-blue:$five;
 $green:#3FAF6C;
+$green2:$three;
 $lite-blue: #1EC4DA;
 $red:#EF5350;
 
@@ -77,6 +85,18 @@ $red:#EF5350;
    CLASSES
 ==============*/
 
+.bold {
+    font-weight: bold;
+
+    li {
+        font-weight: bold;
+    }
+
+    a {
+        font-weight: bold;
+    }
+}
+
 .container {
     max-width: 1200px;
 
@@ -86,6 +106,14 @@ $red:#EF5350;
 
     &.slimmer {
         max-width: 800px;
+    }
+
+    &.wide {
+        max-width: 1400px;
+    }
+
+    &.wider {
+        max-width: 1600px;
     }
 }
 
@@ -175,6 +203,11 @@ $red:#EF5350;
     }
 }
 
+.und {
+    padding: 1em 0;
+    text-decoration: underline;
+}
+
 
 
 /*=============
@@ -199,4 +232,5 @@ h3 {
 @import "header";
 @import "home";
 @import "faq";
+@import "contact";
 @import "footer";

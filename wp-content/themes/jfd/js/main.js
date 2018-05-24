@@ -243,7 +243,6 @@ jQuery(document).ready(function ($) {
         };
         ScrollVisible.prototype.onClick = function () {
             var selector = $(this.selector);
-            console.log(this.scroll);
             selector.on("click", this.to);
         };
         ScrollVisible.prototype.start = function () {
@@ -254,6 +253,18 @@ jQuery(document).ready(function ($) {
     }(ScrollTo));
     var bottomArrow = new ScrollVisible(".fixed-bottom-block", "body", "appear");
     bottomArrow.start();
+    $(".faq-list-item").on("click", function () {
+        var result = $(this).find("svg").hasClass("fa-angle-right");
+        console.log(result);
+        if (result) {
+            $(this).find("svg").addClass("fa-angle-down").removeClass("fa-angle-right");
+            $(this).addClass("active");
+        }
+        else {
+            $(this).find("svg").addClass("fa-angle-right").removeClass("fa-angle-down");
+            $(this).removeClass("active");
+        }
+    });
     //$("#menu-item-42").on("click", function(){
     //     const element = $("#services").position();
     //    $("html,body").animate({

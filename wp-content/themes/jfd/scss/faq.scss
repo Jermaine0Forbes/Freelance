@@ -4,12 +4,101 @@
 
 #faq {
 
-    h3 {
-        padding-bottom: 3em;
-    }
+
 
     .faq-container {
         padding: 5em 1em;
 
+    }
+
+    .faq-header {
+        background-image: url(http://jfd.co/wp-content/uploads/2018/05/faq-header.jpg);
+        background-size: cover;
+        position: relative; //        max-height: 600px;
+        //        min-height: 300px;
+        min-height: 600px;
+        width: 100%;
+
+
+        p {
+            color: white;
+            text-align: center;
+            width: 60%;
+            margin: auto;
+            font-size: 1.2em;
+        }
+    }
+
+    .faq-title {
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        padding-top: 3em;
+        font-size: 4em;
+    }
+
+    .faq-questions {
+        //        display: none;
+        padding: 0.5em;
+
+
+        a {
+            text-transform: capitalize;
+            font-size: 1.1em;
+
+            &:hover {
+                color: $green2;
+            }
+        }
+
+        li {
+            margin-bottom: 0.25em;
+        }
+    }
+
+    .help-topic {
+        padding-bottom: 1em;
+        font-size: 2.5em;
+    }
+
+    .layer {
+
+        background: transparentize($five, 0.3);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+
+
+    .list-group-item {
+
+        font-size: 1.4em;
+
+        &.active {
+            background: $green2;
+            border-color: transparent;
+        }
+    }
+
+
+    .phone {
+        color: $green2;
+
+        &:hover {
+            color: $one;
+        }
+    }
+
+    .section {
+        border-bottom: 1px solid $grey3;
+        padding: 2em;
+
+        &:nth-last-child(1) {
+            border-color: transparent;
+        }
+
+        &:nth-child(1) {
+            padding-top: 0;
+        }
     }
 }
