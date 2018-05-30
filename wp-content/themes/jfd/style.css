@@ -285,12 +285,12 @@ header#masthead {
       background: #662D91;
       border-bottom: 0.3em #25033F solid; }
       .home .btn-container .btn.purple:hover {
-        background: rgba(102, 45, 145, 0.5); }
+        background: #3d1b57; }
     .home .btn-container .btn.green {
       background: #72C032;
       border-bottom: 0.3em green solid; }
       .home .btn-container .btn.green:hover {
-        background: rgba(114, 192, 50, 0.5); }
+        background: #4e8322; }
 
 .home .main-section-1 {
   min-height: 600px; }
