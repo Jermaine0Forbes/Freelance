@@ -58,6 +58,13 @@ WP Bootstrap Starter includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 3.0.15 - May 7, 2018 =
+* Remove the font awesome files
+* Enqueue the fontawesome CDN
+
+= 3.0.14 - May 2, 2018 =
+* Update woocommerce files
+
 = 3.0.13 - April 17, 2018 =
 * Update the bootstrap files
 * Fix the layout of the category widget to show the post count properly

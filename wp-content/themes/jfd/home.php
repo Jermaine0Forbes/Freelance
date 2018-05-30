@@ -18,8 +18,13 @@ get_header(); ?>
         <main id="main" class="site-main" role="main">
             <section class="main-section-1" style="background-image:url(<?php the_field('s1_img'); ?>)">
                 <h1 class="title">we create powerful sites</h1>
-                <h3 class="title-2">Simply put we create websites and all that goes along with it!</h3>
-                <?php echo do_shortcode( '[contact-form-7 id="41" title="Home Contact Form"]' ); ?>
+                <h3 class="title-2">By developing unique web experiences that intesifies the strength of your brand, leads, and sales</h3>
+                <div class="btn-container">
+                   <a href="/faq" class="btn purple" >learn more</a>
+                   <a href="/contact" class="btn green" >contact us</a>
+                </div>
+                
+                <?php // echo do_shortcode( '[contact-form-7 id="41" title="Home Contact Form"]' ); ?>
             </section>
             <section class="main-section-2 services" id="services">
                 <div class="container">

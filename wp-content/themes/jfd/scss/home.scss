@@ -10,6 +10,42 @@
 
     }
 
+    .btn-container {
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width:500px;
+        margin-top:2em;
+
+        .btn {
+            color: white;
+            text-transform: capitalize;
+            font-weight: bold;
+            padding: 0.7em 2em;
+            border-radius: 15px;
+            font-size: 1.2em;
+            margin:0 0.3em;
+
+            &.purple {
+                background: $purple;
+                border-bottom: 0.3em $five solid;
+                &:hover {
+                    background: transparentize($purple, 0.5);
+                }
+            }
+
+            &.green {
+                background: $green2;
+                border-bottom: 0.3em green solid;
+
+                &:hover {
+                    background: transparentize($green2, 0.5);
+                }
+            }
+        }
+    }
+
     .main-section {
 
         &-1 {
@@ -51,6 +87,8 @@
 
                 &-2 {
                     text-align: center;
+                    margin: auto;
+                    width: 50%;
                 }
             }
         }
@@ -92,7 +130,7 @@
                 text-align: center;
 
                 font-size: 3em;
-                text-transform: uppercase;
+                text-transform: capitalize;
 
                 &-2 {
                     text-align: center;
@@ -199,10 +237,38 @@
 
 
 } //home
+
+
+@media(max-width:1024px) {
+
+
+    .home {
+
+        .btn-container{
+            flex-direction:column;
+
+            .btn{
+                margin:1em 0.3em;
+            }
+
+        }
+
+
+    }
+
+
+}
+
+
 @media(max-width:768px) {
 
 
     .home {
+        
+        .main-section-1 .title-2{
+            font-size:1.1em;
+            width:70%;
+        }
 
         .main-section {
 
@@ -214,6 +280,38 @@
 
 
     }
+
+
+}
+
+
+
+@media(max-width:576px) {
+
+
+    .home .main-section-1 .title {
+        font-size: 2.5em;
+    }
+
+    .home .main-section-2 .header {
+        font-size: 2em;
+    }
+
+    .home h3 {
+        font-size: 1.5em;
+        margin-bottom: 1em;
+    }
+   
+    
+    .home .btn-container{
+            flex-direction:column;
+            width:80%;
+
+            .btn{
+                font-size:1em;
+            }
+
+        }
 
 
 }

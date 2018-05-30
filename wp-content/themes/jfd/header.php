@@ -19,6 +19,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="profile" href="http://gmpg.org/xfn/11">
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+        <link rel="icon"   href="<?php echo get_theme_file_uri().'/img/favicon-32x32.png' ?>">
         <?php wp_head(); ?>
         <link href="https://fonts.googleapis.com/css?family=Heebo:900|Teko:500" rel="stylesheet">
     </head>
@@ -30,17 +31,17 @@
                 <section class="header-section-1 d-none d-md-block">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-6 contact">
+                            <div class="col-md-7 contact">
                                 <a class="email" href="mailto:<?php echo $GLOBALS['cgv']['phone'] ?>"><span class="fa fa-envelope"></span> <?php echo $GLOBALS['cgv']['email'] ?></a>
                                 <a class="phone" href="tel:<?php echo $GLOBALS['cgv']['phone'] ?>">
                                     <span class="fa fa-phone"></span> <?php echo $GLOBALS['cgv']['phone'] ?>
                                 </a>
                             </div>
                             <div class="col-md-2 ml-auto social">
-                                <a href="#"><span class="fa fa-facebook"></span></a>
-                                <a href="#"><span class="fa fa-twitter"></span></a>
-                                <a href="#"><span class="fa fa-linkedin"></span></a>
-                                <a href="#"><span class="fa fa-pinterest"></span></a>
+                                <a href="#"><span class="fab fa-facebook"></span></a>
+                                <a href="#"><span class="fab fa-twitter"></span></a>
+                                <a href="#"><span class="fab fa-linkedin"></span></a>
+                                <a href="#"><span class="fab fa-pinterest"></span></a>
                             </div>
                         </div>
                     </div>
@@ -51,7 +52,14 @@
                             <div class="navbar-brand mr-0 col-3">
                                 <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
                                 <a href="<?php echo esc_url( home_url( '/' )); ?>">
-                            <img src="<?php echo esc_attr(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" class="img-fluid site-logo" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                                    
+                                    
+                            <img src="<?php echo esc_attr(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" class="img-fluid site-logo d-none d-md-block" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                                    
+                                    
+                            <img src="http://jfd.co/wp-content/uploads/2018/05/logo-1.png" class="img-fluid  d-md-none mobile-logo" 
+                                 alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                                    
                                 </a>
                                 <?php else : ?>
                                 <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>">

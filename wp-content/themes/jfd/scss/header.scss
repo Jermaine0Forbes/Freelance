@@ -55,8 +55,12 @@ header#masthead {
 
         }
     }
+    
+    .mobile-logo{
+        max-width:100px;
+        width:100%;
+    }
 
-    .navbar-collapse {}
 
     .primary {
         display: flex;
@@ -75,7 +79,7 @@ header#masthead {
     }
 
     .site-logo {
-        width: 30%;
+        width: 60%;
     }
 
     .secondary {
@@ -100,15 +104,16 @@ header#masthead {
         text-align: right;
         a {
             text-transform: capitalize;
-            background: white;
-            border: 2px solid $blue;
-            color: $blue;
+            background:  $green2;
+//            border: 2px solid $green2;
+            border-color:transparent;
+            color:white ;
             font-weight: bold;
             padding: 0.5em;
             transition: all 0.5s;
             &:hover {
                 color: white;
-                background: $blue;
+                background: $purple;
             }
         }
     }

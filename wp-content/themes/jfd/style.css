@@ -163,6 +163,18 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
   padding: 1em 0;
   text-decoration: underline; }
 
+@media (max-width: 800px) {
+  #page h1.title {
+    padding-top: 1.5em; } }
+
+@media (max-width: 768px) {
+  .mobile-text-center {
+    text-align: center; } }
+
+@media (max-width: 600px) {
+  #page h1.title {
+    font-size: 2.5em; } }
+
 /*=============
     GENERAL
 ==============*/
@@ -204,6 +216,9 @@ header#masthead {
       justify-content: space-around; }
   header#masthead .header-section-2 {
     padding: 1em 0; }
+  header#masthead .mobile-logo {
+    max-width: 100px;
+    width: 100%; }
   header#masthead .primary {
     display: flex;
     width: 100%;
@@ -215,7 +230,7 @@ header#masthead {
       header#masthead .primary a:hover {
         color: #72C032; }
   header#masthead .site-logo {
-    width: 30%; }
+    width: 60%; }
   header#masthead .secondary a {
     background: #eee;
     font-weight: 500;
@@ -230,9 +245,9 @@ header#masthead {
     text-align: right; }
     header#masthead .quote a {
       text-transform: capitalize;
-      background: white;
-      border: 2px solid #662D91;
-      color: #662D91;
+      background: #72C032;
+      border-color: transparent;
+      color: white;
       font-weight: bold;
       padding: 0.5em;
       transition: all 0.5s; }
@@ -250,6 +265,32 @@ header#masthead {
 ==============*/
 .home .block-info {
   text-align: center; }
+
+.home .btn-container {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 500px;
+  margin-top: 2em; }
+  .home .btn-container .btn {
+    color: white;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border-radius: 15px;
+    font-size: 1.2em;
+    margin: 0 0.3em; }
+    .home .btn-container .btn.purple {
+      background: #662D91;
+      border-bottom: 0.3em #25033F solid; }
+      .home .btn-container .btn.purple:hover {
+        background: rgba(102, 45, 145, 0.5); }
+    .home .btn-container .btn.green {
+      background: #72C032;
+      border-bottom: 0.3em green solid; }
+      .home .btn-container .btn.green:hover {
+        background: rgba(114, 192, 50, 0.5); }
 
 .home .main-section-1 {
   min-height: 600px; }
@@ -278,7 +319,9 @@ header#masthead {
     text-align: center;
     word-spacing: 3px; }
     .home .main-section-1 .title-2 {
-      text-align: center; }
+      text-align: center;
+      margin: auto;
+      width: 50%; }
 
 .home .main-section-2 {
   padding-top: 5em;
@@ -297,7 +340,7 @@ header#masthead {
   .home .main-section-2 .header {
     text-align: center;
     font-size: 3em;
-    text-transform: uppercase; }
+    text-transform: capitalize; }
     .home .main-section-2 .header-2 {
       text-align: center;
       text-transform: capitalize;
@@ -361,9 +404,32 @@ header#masthead {
 .home h3 {
   color: white; }
 
+@media (max-width: 1024px) {
+  .home .btn-container {
+    flex-direction: column; }
+    .home .btn-container .btn {
+      margin: 1em 0.3em; } }
+
 @media (max-width: 768px) {
+  .home .main-section-1 .title-2 {
+    font-size: 1.1em;
+    width: 70%; }
   .home .main-section-3 {
     text-align: center; } }
+
+@media (max-width: 576px) {
+  .home .main-section-1 .title {
+    font-size: 2.5em; }
+  .home .main-section-2 .header {
+    font-size: 2em; }
+  .home h3 {
+    font-size: 1.5em;
+    margin-bottom: 1em; }
+  .home .btn-container {
+    flex-direction: column;
+    width: 80%; }
+    .home .btn-container .btn {
+      font-size: 1em; } }
 
 /*=============
     FAQ
@@ -383,6 +449,9 @@ header#masthead {
     width: 60%;
     margin: auto;
     font-size: 1.2em; }
+
+#faq .faq-sidebar .list-group {
+  margin-bottom: 2em; }
 
 #faq .faq-title {
   color: white;
@@ -452,11 +521,34 @@ header#masthead {
   text-transform: uppercase;
   font-size: 4em; }
 
+#contact .label {
+  font-family: 'Heebo', sans-serif;
+  font-size: 1.5em;
+  text-transform: capitalize; }
+
 #contact .layer {
   background: rgba(114, 192, 50, 0.7);
   height: 100%;
   width: 100%;
   position: absolute; }
+
+#contact .required {
+  color: #72C032; }
+
+#contact .contact-container {
+  padding: 6em 0; }
+  #contact .contact-container input[type="submit"] {
+    background: #72C032;
+    font-size: 1.3em;
+    padding: 0.5em 2em;
+    border-color: transparent;
+    font-weight: bold; }
+    #contact .contact-container input[type="submit"]:hover {
+      background: #662D91; }
+
+@media (max-width: 1200px) {
+  #contact .contact-container {
+    padding: 6em 4em; } }
 
 /*=============
     FOOTER
@@ -514,7 +606,8 @@ footer.site-footer .widget {
     padding: 0;
     list-style: none; }
     footer.site-footer .widget .links a {
-      text-transform: capitalize; }
+      text-transform: capitalize;
+      padding: 0; }
   footer.site-footer .widget .site-title {
     color: #72C032;
     text-transform: capitalize; }

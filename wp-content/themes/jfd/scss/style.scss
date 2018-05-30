@@ -30,6 +30,7 @@ $five:map-get($map-2, purpleD);
 
 
 $blue:$one;
+$purple:$one;
 $black:$two;
 $orange:$three;
 $grey:$four;
@@ -207,6 +208,43 @@ $red:#EF5350;
     padding: 1em 0;
     text-decoration: underline;
 }
+
+
+@media(max-width:800px) {
+
+
+    #page h1.title {
+       padding-top:1.5em;
+    }
+
+
+
+}
+
+
+@media(max-width:768px) {
+
+
+    .mobile-text-center {
+
+        text-align:center;
+
+    }
+
+
+}
+
+@media(max-width:600px) {
+
+
+   #page h1.title {
+       font-size:2.5em;
+    }
+
+
+}
+
+
 
 
 

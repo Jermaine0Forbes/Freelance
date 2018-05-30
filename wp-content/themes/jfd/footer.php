@@ -18,7 +18,7 @@
     </div>
     <!-- #content -->
 
-    <div class="fixed-bottom-block fade-out">
+    <div class="fixed-bottom-block fade-out d-none d-md-flex">
         <div class="scroll-arrow">
             <span class="fa fa-arrow-up">
             
@@ -31,7 +31,7 @@
             <div class="container">
 
                 <div class="row justify-content-around center-y flex-lg-row flex-column">
-                    <h3>if you need any help for your website?</h3>
+                    <h3 class="mobile-text-center">if you need any help for your website?</h3>
 
                     <a class="contact" href="tel:<?php echo $GLOBALS['cgv']['phone'] ?>">contact us <span class="fa fa-angle-right"></span></a>
                 </div>

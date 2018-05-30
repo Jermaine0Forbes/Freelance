@@ -9,7 +9,7 @@ get_header();
         <header class="faq-header">
             <!--            <img src="http://jfd.co/wp-content/uploads/2018/05/faq-header.jpg" class="img-fluid" />-->
             <div class="layer">
-                <h1 class="faq-title">frequently asked questions</h1>
+                <h1 class="faq-title title">frequently asked questions</h1>
                 <p>
                     Here are some common questions that clients have asked me or questions I think the general populace wants to know about my services. If there are any additional questions you can contact me by <a class="phone" href="tel:786-863-0270">phone</a> to get additional details on how I can help you build or improve your website.
                 </p>
@@ -19,18 +19,16 @@ get_header();
         <div class="container wide faq-container">
             <div class="row fluid ">
 
-                <aside class="col-md-4">
+                <aside class="col-md-4 faq-sidebar">
                     <div class="list-group">
                         <button type="button" data-toggle="collapse" href="#service-questions" class="faq-list-item list-group-item list-group-item-action ">
                            <span class="fa fa-angle-right"></span> Services
                         </button>
                         <div class="collapse " id="service-questions">
                             <ul class="nav flex-column faq-questions ">
-                                <li><a href="#">Do you guys do seo optimization</a></li>
-                                <li><a href="#">Do you create e-commerce sites</a> </li>
-                                <li><a href="#">Do you do one page websites</a> </li>
-                                <li><a href="#">How long on average would it take to finish a web project</a> </li>
-                                <li><a href="#">What do you create your projects with?</a> </li>
+                                <li><a href="#service-1">Do you guys do seo optimization</a></li>
+                                <li><a href="#service-2">Do you create e-commerce sites</a> </li>
+                                <li><a href="#service-3">How long on average would it take to finish a web project</a> </li>
 
                             </ul>
                         </div>
@@ -42,9 +40,9 @@ get_header();
                         </button>
                         <div class="collapse" id="price-questions">
                             <ul class="nav flex-column faq-questions ">
-                                <li><a href="#"> How much does it cost for a website</a></li>
-                                <li><a href="#"> How much does it cost to update a website</a></li>
-                                <li><a href="#"> How much does it cost to update the CSS , HTML, or images  of a website</a></li>
+                                <li><a href="#price-1"> How much does it cost for a website</a></li>
+                                <li><a href="#price-2"> How much does it cost to update a website</a></li>
+                                <li><a href="#price-3"> How much does it cost to update the CSS , HTML, or images  of a website</a></li>
                             </ul>
                         </div>
 
@@ -55,9 +53,9 @@ get_header();
                         </button>
                         <div class="collapse" id="deal-questions">
                             <ul class="nav flex-column faq-questions">
-                                <li><a href="#">What is the testimonial deal</a> </li>
-                                <li><a href="#">What is the google review deal</a> </li>
-                                <li><a href="#">Are there any other ways to get discount</a> </li>
+                                <li><a href="#deal-1">What is the testimonial deal</a> </li>
+                                <li><a href="#deal-2">What is the google review deal</a> </li>
+                                <li><a href="#deal-3">Are there any other ways to get discount</a> </li>
                             </ul>
                         </div>
 
@@ -72,24 +70,24 @@ get_header();
                 <main id="main" class="site-main col-md-8" role="main">
 
                     <section class="section section-1 services">
-                        <h3 class="help-topic">Services</h3>
+                        <h3 id="services" class="help-topic">Services</h3>
 
 
 
-                        <h4>Do you guys do SEO optimization?</h4>
+                        <h4 id="service-1">Do you guys do SEO optimization?</h4>
                         <p>
                             Not only do we create crisp websites, we also partake in doing an SEO Boost to improve your rankings in popular search engines like Google or Bing. We are able to acheive these results by using software that can analyze and suggest certain adjustments to make in the website that will allow search engine web crawling bots index your site a lot easier.
 
                         </p>
 
 
-                        <h4>Do you create E-commerce sites?</h4>
+                        <h4 id="service-2">Do you create E-commerce sites?</h4>
                         <p>
                             At this time, we do not do this. But, we are training developers at the moment to be knowledgeable about it so that in the future we can service the people who need this assistance.
 
                         </p>
 
-                        <h4>What is the average time it would take to finish a web project?</h4>
+                        <h4 id="service-3">What is the average time it would take to finish a web project?</h4>
                         <p>
                             Well, that entirely depends on how big and complex the website will be. For a five page website that will be stylized, responsively designed, have dynamic javascript applications, and simple data/querying functionality. I would assume a month or so. But, if the project that you are desiring are going to be 5 static pages, then it probably is not going to take that long and maybe take less than 3 weeks. It might be even 2 weeks if we don't have that many clients to work with. But, for a basic web project it will take a month or so to get it done, if there are not any other variables that we are considering
                         </p>
@@ -99,9 +97,9 @@ get_header();
 
                     </section>
                     <section class="section section-2 prices">
-                        <h3 class="help-topic">Prices</h3>
+                        <h3 id="prices" class="help-topic">Prices</h3>
 
-                        <h4>How much does it cost for simple a website</h4>
+                        <h4 id="price-1">How much does it cost for simple a website</h4>
 
                         <h5 class="und">Simple Website</h5>
 
@@ -127,7 +125,7 @@ get_header();
 
 
 
-                        <h4>How much does it cost to update a website?</h4>
+                        <h4 id="price-2">How much does it cost to update a website?</h4>
 
                         <h5 class="und">5 Page Update</h5>
 
@@ -145,7 +143,7 @@ get_header();
 
 
 
-                        <h4>How much does it cost to update the CSS , HTML, or images of a website</h4>
+                        <h4 id="price-3">How much does it cost to update the CSS , HTML, or images of a website</h4>
                         <p>
                             For 5 pages to be updated with html,css, or images it will be $50 .And for any additional pages it will be $25. If you want to include php or mysql functionality the $50 will turn into $100 and the additional pages will be $50
 
@@ -154,9 +152,9 @@ get_header();
 
                     </section>
                     <section class="section section-3 deals">
-                        <h3 class="help-topic">Deals</h3>
+                        <h3 id="deals" class="help-topic">Deals</h3>
 
-                        <h4>What is the testimonial deal?</h4>
+                        <h4 id="deal-1">What is the testimonial deal?</h4>
                         <p>
                             There will be a discount in services if you can provide a positive testimonial
 
@@ -164,12 +162,12 @@ get_header();
                         </p>
                         <span><strong>Note:</strong> you can only do this service one</span>
 
-                        <h4>What is the google review deal?</h4>
+                        <h4 id="deal-2">What is the google review deal?</h4>
                         <p>
                             This will be a discount where you provide a good review from the google business
                         </p>
 
-                        <h4>Are there any other ways to get discounts?</h4>
+                        <h4 id="deal-3">Are there any other ways to get discounts?</h4>
                         <p>
                             There will be more in the future to reduce the amount of the total service. But at this moment there is only a few options you can use.
 

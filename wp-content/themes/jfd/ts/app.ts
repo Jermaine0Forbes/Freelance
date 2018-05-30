@@ -21,7 +21,8 @@ jQuery( document ).ready(function( $ ) {
         menuOffset ,
         previousPosition,
         scrollPosition,
-        sticking;
+        sticking,
+        topPosition = 0;
 
         function whenUp(){
             if(_up){
@@ -65,7 +66,7 @@ jQuery( document ).ready(function( $ ) {
         }
 
         function onScroll(){
-            properties = (empty(adminBar))?{position:"fixed", width:"100%"}:{position:"fixed", width:"100%", top:adminBar};
+            properties = (empty(adminBar))?{position:"fixed", width:"100%", top: topPosition}:{position:"fixed", width:"100%", top:topPosition};
             scrollPosition = _window.scrollTop();
             sticking = (menuOffset <= scrollPosition)?true:false;
             if(sticking){
@@ -85,6 +86,7 @@ jQuery( document ).ready(function( $ ) {
             adminBar  = $('#wpadminbar').height();
             adminBar = (empty(adminBar))? 0 : adminBar;
             properties =(mobile <= 600)? {position:"fixed", width:"100%", top:0} : {position:"fixed", width:"100%", top:adminBar} ;
+            topPosition = (mobile <= 600)? 0 : adminBar;
             // (menuBar.hasClass("on"))? menuBar.css(properties): onScroll();
             menuBar.hasClass("on") && menuBar.css(properties);
         }
@@ -232,13 +234,13 @@ bottomArrow.start();
     
     $(".faq-list-item").on("click" ,function(){
     
-      const  result = $(this).find("svg").hasClass("fa-angle-right");
+      const  result = $(this).find("span").hasClass("fa-angle-right");
         console.log(result);
     if(result){
-        $(this).find("svg").addClass("fa-angle-down").removeClass("fa-angle-right");
+        $(this).find("span").addClass("fa-angle-down").removeClass("fa-angle-right");
         $(this).addClass("active");
        }else{
-        $(this).find("svg").addClass("fa-angle-right").removeClass("fa-angle-down");
+        $(this).find("span").addClass("fa-angle-right").removeClass("fa-angle-down");
            $(this).removeClass("active");
        }
      
