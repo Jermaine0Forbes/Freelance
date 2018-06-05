@@ -14,7 +14,6 @@
 
 get_header(); ?>
 
-    <section id="primary" class="content-area fluid ">
         <main id="main" class="site-main" role="main">
             <section class="main-section-1" style="background-image:url(<?php the_field('s1_img'); ?>)">
                 <h1 class="title">we create powerful sites</h1>
@@ -107,12 +106,11 @@ get_header(); ?>
                             </a>
                         </div>
                         <div class="col-md-6 ">
-                            <img class="img-fluid" src="<?php the_field('s3_img'); ?>" />
+                            <img class="img-fluid" src="<?php the_field('s3_img'); ?>" alt="image of devices" />
                         </div>
                     </div>
                 </div>
-                <?php $src =  get_theme_file_uri()."/img/s3-btm.png"; ?>
-                <!--<img class="img-fluid d-none d-md-flex" src="<?php //echo $src;   ?>" /> -->
+               
             </section>
             <section class="main-section-4 recent-projects">
 
@@ -126,7 +124,7 @@ get_header(); ?>
                         <div class="col-md-4 project project-1">
                             <a href="<?php the_field('s4_block_a_1'); ?> ">
                             
-                                <img class="img-fluid project-img" src="<?php the_field('s4_block_img_1'); ?> " alt="image" />
+                                <img class="img-fluid project-img" src="<?php the_field('s4_block_img_1'); ?> " alt="sprout 360 screenshot" />
                                 <h3 class="title"><?php the_field('s4_block_h3_1'); ?></h3>
                                 <p class="summary">
                                    <?php the_field('s4_block_p_1'); ?>
@@ -136,7 +134,7 @@ get_header(); ?>
                         </div>
                         <div class="col-md-4 project project-2">
                             <a href="<?php the_field('s4_block_a_2'); ?>">
-                                <img class="img-fluid project-img" src="<?php the_field('s4_block_img_2'); ?> " alt="image" />
+                                <img class="img-fluid project-img" src="<?php the_field('s4_block_img_2'); ?> " alt="ava screenshot" />
                                 <h3 class="title"><?php the_field('s4_block_h3_2'); ?></h3>
                                 <p class="summary">
                                     <?php the_field('s4_block_p_2'); ?>
@@ -145,7 +143,7 @@ get_header(); ?>
                         </div>
                         <div class="col-md-4 project project-3">
                             <a href="<?php the_field('s4_block_a_3'); ?>">
-                                <img class="img-fluid project-img" src="<?php the_field('s4_block_img_3'); ?> " alt="image" />
+                                <img class="img-fluid project-img" src="<?php the_field('s4_block_img_3'); ?> " alt="enroll media screenshot" />
                                 <h3 class="title"><?php the_field('s4_block_h3_3'); ?></h3>
                                 <p class="summary">
                                     <?php the_field('s4_block_p_3'); ?>
@@ -160,8 +158,6 @@ get_header(); ?>
 
         </main>
         <!-- #main -->
-    </section>
-    <!-- #primary -->
 
     <?php
 get_footer();

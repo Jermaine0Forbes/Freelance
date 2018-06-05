@@ -50,7 +50,7 @@
                     <?php echo date('Y'); ?>
 
                     <span class="sep"> | </span> Designed By
-                    <a class="credits" href="https://jermaineforbes.com" target="_blank" title="Jermaine Forbes" alt="Jermaine Forbes Design Theme">
+                    <a class="credits" href="https://jermaineforbes.com" target="_blank" title="Jermaine Forbes" >
                         Jermaine Forbes
                     </a>
 

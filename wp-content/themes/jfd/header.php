@@ -57,7 +57,7 @@
                             <img src="<?php echo esc_attr(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" class="img-fluid site-logo d-none d-md-block" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
                                     
                                     
-                            <img src="http://jfd.co/wp-content/uploads/2018/05/logo-1.png" class="img-fluid  d-md-none mobile-logo" 
+                            <img src="https://jfd.jforbes.site/wp-content/uploads/2018/05/logo-1.png" class="img-fluid  d-md-none mobile-logo" 
                                  alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
                                     
                                 </a>
@@ -92,7 +92,7 @@
                             <div class="col-3 quote flex-right-md my-auto">
                                 <a class="btn btn-primary d-none d-md-inline-block" href="tel:<?php echo $GLOBALS['cgv']['phone'] ?>"> get free quote</a>
 
-                                <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse" data-target=".nav-collapse" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
+                                <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse" data-target=".nav-collapse"  aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="fa fa-bars"></span>
                                 </button>
                             </div>
